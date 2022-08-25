@@ -1,5 +1,12 @@
+/* Media querries */
 @media screen and (max-width: 1100px) {
   .title-assoc {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .footer h5 {
     display: none;
   }
 }
@@ -16,21 +23,32 @@ html {
 #container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 50px 55px 900px 1fr 1fr 1fr;
+  grid-template-rows: 55px 50px 900px 45px 1fr 55px 1fr 100px;
   width: 100%;
   height: 100vh;
   margin: 0;
   padding: 0;
 }
 
-.header-contact {
-  background-color: black;
-  display: grid;
+/* Header */
+.header-nav {
   grid-column: span 4;
   grid-row: 1;
 }
 
-.header-contact ul {
+.navbar-toggler {
+  background-color: var(--brand-color);
+}
+
+/* Contacts */
+.contact {
+  background-color: black;
+  display: grid;
+  grid-column: span 4;
+  grid-row: 2;
+}
+
+.contact ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -39,7 +57,7 @@ html {
   padding: 0;
 }
 
-.header-contact ul li {
+.contact ul li {
   list-style: none;
 }
 
@@ -48,15 +66,15 @@ html {
   color: var(--brand-color);
   text-shadow: 4px 4px 4px white;
   left: 65px;
-  top: 4px;
+  top: 50px;
 }
 
-.header-contact ul li a {
+.contact ul li a {
   color: white;
   text-decoration: none;
 }
 
-.header-contact ul li:hover {
+.contact ul li:hover {
   animation: rotate 1.2s ease-in-out both;
 }
 
@@ -69,62 +87,71 @@ html {
   }
 }
 
-.header-contact ul li a:hover {
+.contact ul li a:hover {
   color: var(--brand-color);
   text-decoration: none;
 }
 
-.header-nav {
-  grid-column: span 4;
-  grid-row: 2;
-}
-
-.navbar-toggler {
-  background-color: var(--brand-color);
-}
-
-.story {
+/* Carousel */
+.carousel {
   grid-column: span 4;
   grid-row: 3;
 }
 
-#img5,
-#img6,
-#img7,
-#img8 {
+#img-1,
+#img-2,
+#img-3,
+#img-4,
+#img-5 {
   height: 900px;
   width: 100%;
 }
 
-.statistics {
-  background-color: rgb(115, 171, 185);
+/* Divider-1 */
+.divider-navbar-1 {
   grid-column: span 4;
   grid-row: 4;
+  background-color: rgb(3, 101, 126);
+}
+
+/* Statistics */
+.statistics {
+  background-color: rgb(3, 101, 126);
+  grid-column: span 4;
+  grid-row: 5;
+}
+
+.img-sand-mining {
+  width: 100%;
 }
 
 .statistics p {
   text-align: center;
   padding-top: 50px;
   font-size: 1.5rem;
+  color: rgb(255, 255, 255);
 }
 
-.img-extraction-sable {
-  width: 100%;
+/* Divider-2 */
+.divider-navbar-2 {
+  grid-column: span 4;
+  grid-row: 6;
+  background-color: rgb(3, 101, 126);
 }
 
+/* Gallery */
 .my-gallery {
-  background-color: rgb(115, 171, 185);
+  background-color: rgb(3, 101, 126);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   grid-column: span 3;
-  grid-row: 5;
-  border-radius: 5px;
+  grid-row: 7;
   border-right: solid 1px black;
 }
 
 .my-gallery h3 {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-align: center;
   text-decoration: underline;
   margin-top: 20px;
@@ -133,26 +160,26 @@ html {
 }
 
 .my-gallery div p {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-align: center;
 }
 
-.img1,
-.img2,
-.img3,
-.img4 {
+.img-6,
+.img-7,
+.img-8,
+.img-9 {
   border-radius: 10px;
   height: 700px;
   width: 100%;
   box-shadow: 5px 5px 5px;
 }
 
+/* Donation and participation */
 .donation {
   grid-column: 4;
-  grid-row: 5;
+  grid-row: 7;
   display: block;
-  background-color: rgb(98, 184, 206);
-  border-radius: 5px;
+  background-color: rgb(21, 184, 224);
   border-left: solid 1px black;
 }
 
@@ -161,43 +188,24 @@ html {
 }
 
 .donation h3 {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-align: center;
   text-decoration: underline;
   padding-top: 20px;
   padding-bottom: 50px;
 }
 
-.footer {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  grid-column: span 4;
-  grid-row: 6;
+.button {
+  color: rgb(0, 0, 0);
+  background-color: var(--brand-color);
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 5px;
+  box-shadow: 5px 5px 5px white;
+  border: none;
 }
 
-.footer ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-
-.footer ul h5 {
-  padding-top: 10px;
-}
-
-.footer ul li {
-  list-style: none;
-}
-
-.footer ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer ul li:hover {
+.button:hover {
   animation: rotate 1.2s ease-in-out both;
 }
 
@@ -210,7 +218,17 @@ html {
   }
 }
 
-.footer ul li a:hover {
+/* Footer */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  grid-column: span 4;
+  grid-row: 8;
+}
+
+.footer h5 {
   color: var(--brand-color);
-  text-decoration: none;
 }
